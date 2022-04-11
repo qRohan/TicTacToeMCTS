@@ -15,8 +15,8 @@ class MCTS():
 
     def best_move(self):
         children = self.root_node.children
-        print([child.n for child in children])
-        print([child.v for child in children])
+        # print([child.n for child in children])
+        # print([child.v for child in children])
         best_node = max(children, key=lambda child: child.v/child.n)
         best_node_index = children.index(best_node)
         result = self.initial_state.get_valid_moves()[best_node_index]
